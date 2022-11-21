@@ -1,0 +1,318 @@
+// @ use à tout le temps mettre en premier si notamment on veut détacher _header et _footer
+
+// puis on peut utiliser les @import notamment pour les variables
+@import 'variables';
+@import './bootstrap_modifs';
+
+
+@mixin googleFonts($nom){
+    @import url('https://fonts.googleapis.com/css2?family=' + $nom + '&display=swap');
+}
+@include googleFonts('$police_titre');
+@include googleFonts('$police_texte');
+
+//@include googleFonts('Abril+Fatface:wght@400;900');
+
+
+
+html, body{
+    margin : 0;
+    padding : 0;
+}
+body{
+    min-width: 400px;
+}
+
+p{
+    font-size : 1em;
+    font-family: $police_texte, sans-serif;
+}
+
+
+h1, h2{
+    font-family: $police_titre, sans-serif;
+}
+
+
+//------------------------------------------------------------------
+// HEADER
+#titre_garde{
+    font-family: $police_titre, cursive;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+//Premiere section Page Garde Accueil
+#section_page_garde{
+    background: -webkit-linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165)); 
+    background: linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165));
+    height: 100vh;
+    color : white;
+    overflow : hidden;
+
+    h1{
+        font-family: $police_titre, sans-serif;
+        vertical-align: center;
+        font-size : 3.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h2{
+        font-family: $police_titre, sans-serif;
+        font-size : 2em;
+    }
+    span{
+        color: $couleur_primaire;
+        font-weight: bold;
+    }
+
+    #flex_page_garde{
+        width: 40%;
+        height :600px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #fond_bleu_page_garde{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        width:100%;
+        height: 600px;
+        background: $couleur_secondaire;
+        // background: url(/public/assets/images/wave.png);
+        // background-repeat:no-repeat;
+        // background-size: cover;
+    }
+    
+    #fond_avatar{
+        background: $couleur_primaire;
+        max-width: 600px;
+        max-height: 450px;
+        position: absolute;
+        z-index: 1;
+        top: 20%;
+        left: 60%;
+        border: solid 5px $couleur_fond_blanc;
+        border-radius: 20px;
+    
+        img{
+            text-align: center;
+            max-width: 100%;
+            vertical-align: center;
+         
+        }
+    }
+
+    #fleche{
+        display: flex;
+        width: 100%;
+        justify-content: center;   
+        position: absolute;
+        text-align: center;
+        top: 80%;
+       
+    }
+}
+
+// deuxième section Présentation
+
+#section_presentation{
+    background: -webkit-linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165)); 
+    background: linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165));
+    height: 50vh;
+    color:white;
+
+    #flex_presentation{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    p{
+        margin-top: 30px;
+        padding-left: 140px;
+        font-size: 1.25em;
+        font-family: $police_texte;
+        text-align: justify;
+    }
+ 
+    #boutton_presentation{
+        padding-top: 50px;
+        text-align: center;
+        top: 85%;
+        height: 150px;
+
+        a{
+            background: $couleur_secondaire;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            padding: 10px 20px;
+            border: solid 1px $couleur_fond_blanc;
+            border-radius: 15px;
+            font-family: $police_texte;
+            box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.67);
+            -webkit-box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.67);
+            -moz-box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.67);
+        }
+        a:hover{
+            background: $couleur_primaire;
+            text-decoration: none;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: solid 3px $couleur_fond_blanc;
+            border-radius: 15px;
+            font-family: $police_texte;
+            box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.67);
+            -webkit-box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.67);
+            -moz-box-shadow: 9px 10px 11px 0px rgba(0,0,0,0.67);
+        }
+
+    }
+
+}
+
+
+//Troisième section Réalisation
+#section_projets{
+    background: $couleur_fond_blanc;
+    max-height: 300vh;
+    color : black;
+    overflow : hidden;
+
+    a{
+        text-decoration: none;
+    }
+    h2{
+       color:  $couleur_primaire;
+    }
+}
+
+// Quatrième section compétences
+#section_competences{
+    background: -webkit-linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165)); 
+    background: linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165));
+    max-height: 200vh;
+    color : white;
+    overflow : hidden;
+
+    #flex_competences{
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+    #taille_image{
+        max-width: 20%;
+    }
+    #progress_bar{
+        width: 80%;
+    }
+}
+
+//Cinquième section Contact
+#section_contact{
+    // text-align: center;
+    background: $couleur_fond_blanc;
+    padding: 20px;
+    h2{
+        color:  $couleur_primaire;
+     }
+
+    }
+    
+// FOOTER
+footer{
+    font-family: $police_titre, cursive;
+    font-size: 15px;
+    background: $couleur_footer;
+    color: white;
+    padding: 20px;
+
+    #annee{
+        font-family: $police_titre, cursive;
+        font-size: 18px;
+    }
+
+    #copyright{ 
+        font-size: 25px;
+    }
+}
+
+//-------------------------------------------------------------------------------------
+
+#page_generateur_citation{
+    background: url(./Images/points.png), center url(./Images/jump-start.png); 
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    overflow : hidden;
+}
+
+
+
+
+// @media all and (max-width: 1130px){
+// .container{
+//     width: 700px;
+// }
+// #flex_presentation, .element_gauche{
+//     padding: 15px;
+// }
+// #grille{
+//     grid-template-columns: repeat(2,1fr);
+//     padding:30px;
+// }
+
+// }
+
+// @media all and (max-width: 730px){
+//     .container{
+//         width: 100%;
+//     }
+// }
+
+@media all and (max-width : 768px){
+
+    #section_presentation img{
+        display:none;
+    }
+    #section_presentation p, span, #lien{
+        font-size: 0.9em;
+        text-align: left;
+    }
+}
+
+@media all and (max-width : 1200px){
+
+    #section_presentation img{
+       width: 40%;
+       height: 40%;
+    }
+    #section_presentation p, span, #lien{
+        font-size: 0.9em;
+        text-align: left;
+    }
+    
+}
+
+
+@media all and (max-width : 1500px){
+#section_page_garde #fond_blanc_page_garde{
+    left: 40%;
+}
+}
+
+@media all and (max-width : 993px){
+    #section_page_garde #fond_blanc_page_garde{
+        display:none;
+    }
+    }

@@ -1,0 +1,3 @@
+Assets pour ressources
+
+Ici on stocke tous les ressources du projets images / logo / ...
