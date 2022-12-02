@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/design/CSS/styles.css">
-    <link rel="icon" type="image/x-icon" href="./public/assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./public/assets/images/favicon2.png">
     <title>PORTFOLIO Code NoGorD | Accueil</title>
 </head>
 
@@ -48,64 +48,66 @@
 
     <!-- Premiere Section page de garde / accueil -->
     <section id="section_page_garde">
-        <div id="fond_bleu_page_garde">
-            <div class="container">
-                <div>
+        <div id="fond_bandeau_central">
+            <!-- <div class="container"> -->
+                <!-- <div> -->
                     <div id="flex_page_garde">
                         <h1>Sebastien PELC</h1><br>
-                        <h2><span>&lt</span> Développeur Web <span>&gt</span></h2><br>
+                        <h2 id="titre_entete"><span>&lt</span> Développeur Web <span>&gt</span></h2><br>
                     </div>
 
-                </div>
+                <!-- </div> -->
 
-            </div>
+            <!-- </div> -->
         </div>
-        <div id="fond_avatar" class="container">
+        <div id="fond_avatar">
             <img src="./public/assets/images/Avatar.png" alt="illustration Avatar" />
         </div>
 
         <div id="fleche">
-            <img src="public/assets/images/fleche.png">
+            <img id="fleche_animation" src="public/assets/images/fleche.png">
         </div>
     </section>
 
     <!-- Deuxième Section Présentation -->
     <section id="section_presentation">
         <div class="container">
-            <h2> Présentation brève</h2><br>
-            <div id="flex_presentation">
-                <p>
-                    Hello ! Je m’appelle Sebastien PELC, développeur Web junior.
-                    Issu d'une formation en programmation informatique sur Paris, EPITECH dans les années 2000, puis
-                    créateur d'une startup dans le E-commerce. J'ai par la suite travaillé dans le domaine de la
-                    formation professionnelle en tant que Responsable de site et notamment dans le secteur du Numérique.
-                    Je souhaite aujourd'hui remettre à jour mes compétences en développement web au travers d'une
-                    reconversion professionnelle afin de répondre aux mieux aux attentes du monde de l'Entreprise.<br>
-                </p>
-
-                <img id="photo_profil" src="./public/assets/images/photo_profil.png" alt="photo de profil">
+            <div class="row">
+                <h2 class="col-12"> Présentation brève</h2><br>
+                <div class="col-4">
+                    <img  src="./public/assets/images/photo_profil.png" alt="photo de profil">
+                </div>
+            
+       
+                <div id="div_texte" class="col-12 col-lg-8">
+                    <p>
+                            Hello ! Je m’appelle Sebastien PELC, développeur Web junior.
+                            Issu d'une formation en programmation informatique sur Paris, EPITECH dans les années 2000, puis
+                            créateur d'une startup dans le E-commerce. J'ai par la suite travaillé dans le domaine de la
+                            formation professionnelle en tant que Responsable de site et notamment dans le secteur du Numérique.
+                            Je souhaite aujourd'hui remettre à jour mes compétences en développement web au travers d'une
+                            reconversion professionnelle afin de répondre aux mieux aux attentes du monde de l'Entreprise.<br>
+                    </p>
+                </div>
+    
+                <div id="boutton_presentation" class="col-12">
+                    <a href="#"> Consulter mon parcours </a>
+                </div>
             </div>
-          
         </div>
-        <!-- <div class="container" id="container_boutton"> -->
-
-            <div id="boutton_presentation" class="container">
-                <a href="#"> Consulter mon parcours </a>
-            </div>
-        <!-- </div> -->
-
+ 
     </section>
 
 
     <!-- Troisieme Section  Réalisations -->
-    <section id="section_projets" class="pt-5">
+    <section id="section_projets" class="p-0 pt-md-5">
         <div class="container mt-5">
-            <div id="titre_section2" class="mb-5">
+            <div class="m-0 mb-md-5">
                 <h2> Créations </h2>
             </div>
 
             <div class="row my-5">
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/juste prix.png" alt="Jeu du juste prix"
                             class="card-img-top">
@@ -117,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/meteo.png" alt="Jeu du juste prix" class="card-img-top">
                         <div class="card-body">
@@ -128,7 +130,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/tapetaupe.png" alt="Jeu du juste prix"
                             class="card-img-top">
@@ -140,10 +142,7 @@
                     </div>
                 </div>
 
-            </div>
-
-            <div class="row my-5">
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/naruta.png" alt="Jeu du juste prix" class="card-img-top">
                         <div class="card-body">
@@ -154,7 +153,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/memorygame.png" alt="Jeu du juste prix"
                             class="card-img-top">
@@ -166,7 +165,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/harrypotter.png" alt="Jeu du juste prix"
                             class="card-img-top">
@@ -177,11 +176,8 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="row my-5">
-                <div class="col-xs-12 col-md-4">
+                
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/hebergeurimage.png" alt="Jeu du juste prix"
                             class="card-img-top">
@@ -193,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/bitly.png" alt="Jeu du juste prix" class="card-img-top">
                         <div class="card-body">
@@ -204,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mt-3">
                     <div class="card bg-secondary border-secondary text-white text-center">
                         <img src="public/assets/images/projets/inscriptionphp.png" alt="Jeu du juste prix"
                             class="card-img-top">
@@ -227,112 +223,105 @@
     <section id="section_competences" class="p-5">
 
         <div class="container">
-            <h2 class="pb-5"> Mes compétences </h2>
+            <h2 class="p-0 pb-md-5"> Mes compétences </h2>
             <br>
 
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/html.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:85%"></div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:80%"></div>
                 </div>
-
             </div>
-
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/CSS.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:95%"></div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:80%"></div>
                 </div>
-
             </div>
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/Js.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:70%"></div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:70%"></div>
                 </div>
-
             </div>
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/php.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
+                <div class="progress col-12 col-md-8 p-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:40%"></div>
                 </div>
-
             </div>
-
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/bootstrap.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:80%"></div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:80%"></div>
                 </div>
-
             </div>
-
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/sass.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:70%"></div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:75%"></div>
                 </div>
-
             </div>
-
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
+                    <img src="/public/assets/images/logos/symfony.png">
+                </div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:40%"></div>
+                </div>
+            </div>
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
+                    <img src="/public/assets/images/logos/angular.png">
+                </div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:50%"></div>
+                </div>
+            </div>
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
                     <img src="/public/assets/images/logos/react.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:20%"></div>
-                </div>
-
-            </div>
-
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
-                    <img src="/public/assets/images/logos/nextjs.png">
-                </div>
-
-                <div class="progress" id="progress_bar">
+                <div class="progress col-12 col-md-8 p-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:10%"></div>
                 </div>
-
             </div>
-
-            <div id="flex_competences" class="my-5">
-                <div id="taille_image">
-                    <img src="/public/assets/images/logos/python.png">
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
+                    <img src="/public/assets/images/logos/nextjs.png">
                 </div>
-
-                <div class="progress" id="progress_bar">
+                <div class="progress col-12 col-md-8 p-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:5%"></div>
                 </div>
-
             </div>
+            <div class="my-5 row align-items-center">
+                <div class="section_competences-logo col-12 col-md-4 text-center mb-3">
+                    <img src="/public/assets/images/logos/python.png">
+                </div>
+                <div class="progress col-12 col-md-8 p-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:10%"></div>
+                </div>
+            </div>
+            
            
         </div>
 
     </section>
 
 
-    <section id="section_contact" class="pt-4 bg-light text-dark">
+    <section id="section_contact" class="pt-5 bg-light text-dark">
         <div class="container">
             <h2 id="contact" class="mb-5"> Contact</h2>
         </div>
@@ -382,13 +371,14 @@
 
 
 
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
-    <script scr="script.js"></script>
+        <script src="./script.js"></script>
 </body>
 
 </html>

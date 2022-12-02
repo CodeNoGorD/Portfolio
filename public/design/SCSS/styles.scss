@@ -18,6 +18,7 @@
 html, body{
     margin : 0;
     padding : 0;
+    box-sizing: border-box;
 }
 body{
     min-width: 400px;
@@ -67,31 +68,29 @@ h1, h2{
     }
 
     #flex_page_garde{
-        width: 40%;
+        position: relative;
+        width: 100%;
         height :600px;
         display:flex;
         flex-direction: column;
         justify-content: center;
+        left: 15%;
     }
-    #fond_bleu_page_garde{
-        position: absolute;
+    #fond_bandeau_central{
+        position: relative;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
         padding: 0;
         width:100%;
-        height: 600px;
+        height: 50%;
         background: $couleur_secondaire;
-        // background: url(/public/assets/images/wave.png);
-        // background-repeat:no-repeat;
-        // background-size: cover;
     }
     
     #fond_avatar{
         background: $couleur_primaire;
-        max-width: 600px;
-        max-height: 450px;
+        max-width: 700px;
         position: absolute;
         z-index: 1;
         top: 20%;
@@ -101,20 +100,17 @@ h1, h2{
     
         img{
             text-align: center;
-            max-width: 100%;
+            width: 100%;
             vertical-align: center;
-         
         }
     }
 
     #fleche{
         display: flex;
-        width: 100%;
-        justify-content: center;   
+        width: 100%; 
         position: absolute;
-        text-align: center;
         top: 80%;
-       
+        justify-content: center;
     }
 }
 
@@ -123,21 +119,18 @@ h1, h2{
 #section_presentation{
     background: -webkit-linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165)); 
     background: linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165));
-    height: 50vh;
+    height: 50%;
     color:white;
-
-    #flex_presentation{
-        display: flex;
-        flex-direction: row-reverse;
-    }
+    display:flex;
+    text-align: center;
 
     img{
-        width: 100%;
+       width: 100%;
     }
 
-    p{
-        margin-top: 30px;
-        padding-left: 140px;
+    #div_texte{
+        display:flex;
+        align-items: center;
         font-size: 1.25em;
         font-family: $police_texte;
         text-align: justify;
@@ -181,11 +174,9 @@ h1, h2{
 
 }
 
-
 //Troisième section Réalisation
 #section_projets{
     background: $couleur_fond_blanc;
-    max-height: 300vh;
     color : black;
     overflow : hidden;
 
@@ -201,21 +192,13 @@ h1, h2{
 #section_competences{
     background: -webkit-linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165)); 
     background: linear-gradient(to right, rgb(78, 4, 112), rgb(94, 6, 165));
-    max-height: 200vh;
     color : white;
     overflow : hidden;
 
-    #flex_competences{
-        width: 80%;
-        display: flex;
-        align-items: center;
+    .section_competences-logo{
+        max-width: 100%;
     }
-    #taille_image{
-        max-width: 20%;
-    }
-    #progress_bar{
-        width: 80%;
-    }
+  
 }
 
 //Cinquième section Contact
@@ -226,8 +209,7 @@ h1, h2{
     h2{
         color:  $couleur_primaire;
      }
-
-    }
+}
     
 // FOOTER
 footer{
@@ -259,60 +241,65 @@ footer{
 
 
 
-
-// @media all and (max-width: 1130px){
-// .container{
-//     width: 700px;
-// }
-// #flex_presentation, .element_gauche{
-//     padding: 15px;
-// }
-// #grille{
-//     grid-template-columns: repeat(2,1fr);
-//     padding:30px;
-// }
-
-// }
-
-// @media all and (max-width: 730px){
-//     .container{
-//         width: 100%;
-//     }
-// }
-
-@media all and (max-width : 768px){
-
+@media all and (max-width : 990px){
     #section_presentation img{
-        display:none;
+        display: none;
     }
-    #section_presentation p, span, #lien{
-        font-size: 0.9em;
+    #div_texte{
+        margin-top: 20px;
+        padding: 5px;
+    }
+ 
+}
+
+@media all and (max-width : 780px){
+   
+}
+
+@media all and (max-width : 400px){
+    #div_texte{
+        margin-top: 20px;
+        padding: 5px;
+        line-height: 2em;
+        font-style: italic;
+    }
+    #fleche_animation{
+        width: 20%;
+    }
+    #titre_entete{
+        text-decoration: none;
+    }
+    h2{
+        text-decoration: overline;
+        font-weight: bold;
+    }
+    #section_page_garde h1{
+        font-size: 2em;
         text-align: left;
+        padding-bottom: 50px;
     }
+    #section_page_garde h2{
+        font-size: 1.5em;
+        text-align: center;
+        padding-bottom: 150px;
+        
+    }
+
+    #section_projets{
+        padding: 0;
+        h2{
+            text-align: center;
+        }
+    }
+    #section_competences{
+        padding: 0;
+        margin: 0;
+        h2{
+            text-align: center;
+        }
+        .section_competences-logo{
+            max-width: 100%;
+        }
+    }
+
 }
-
-@media all and (max-width : 1200px){
-
-    #section_presentation img{
-       width: 40%;
-       height: 40%;
-    }
-    #section_presentation p, span, #lien{
-        font-size: 0.9em;
-        text-align: left;
-    }
-    
-}
-
-
-@media all and (max-width : 1500px){
-#section_page_garde #fond_blanc_page_garde{
-    left: 40%;
-}
-}
-
-@media all and (max-width : 993px){
-    #section_page_garde #fond_blanc_page_garde{
-        display:none;
-    }
-    }
